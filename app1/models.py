@@ -34,5 +34,14 @@ class Inventory(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class Customer(models.Model):
+    name = models.CharField(max_length=100)
+    contact = models.CharField(max_length=12)
+    address = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
 
 

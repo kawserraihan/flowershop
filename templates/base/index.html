@@ -29,6 +29,8 @@
 
     <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css'%}">
     <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css'%}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- endinject -->
     <!-- Plugin css for this page -->
@@ -40,35 +42,6 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{% static 'assets/images/dashboard/FG_ADMIN.svg'%}" />
 
-    <style>
-        .navbar {
-            background-color: #000;
-        }
-        
-        /* Change the font color in the navigation bar to white */
-        .navbar .navbar-nav .nav-link {
-            color: #fff;
-        }
-        
-        /* Change the background color of the content in the dashboard to white */
-        .content-wrapper {
-            background-color: #fff;
-            color: #000; /* Change the text color in the content */
-        }
-        #sidebar {
-            background-color: #000; /* You can adjust the shade of light black */
-        }
-        
-        /* Change the font color in the side menu bar to white */
-        #sidebar .nav-link {
-            color: #fff;
-        }
-
-        .inventory-link {
-            color: black; /* Change the text color to black */
-        }
-        
-    </style>
   </head>
   <body>
     <div class="container-scroller">
@@ -245,11 +218,11 @@
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link inventory-link" href="{% url 'inventory' %}" data-toggle="modal" data-target="#classesModal">
-                    <span class="menu-title">Inventory</span>
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+              <a class="nav-link" href="{% url 'inventory' %}">
+                  <span class="menu-title">Inventory</span>
+                  <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+          </li>
             
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -282,8 +255,8 @@
           
           <footer class="footer">
             <div class="container-fluid d-flex justify-content-between">
-              <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright ©</span>
-              <span></span>
+              <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright © Rafi - Tanin - Junayed - Khadija. All rights reserved.</span>
+              
             </div>
           </footer>
 
@@ -297,7 +270,7 @@
  
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     
     <!-- container-scroller -->
     <!-- plugins:js -->
@@ -338,6 +311,25 @@
         item.classList.add('active');
       }
     });
+
+
+    
+    </script>
+    <script>
+      // Get all navigation links
+var navLinks = document.querySelectorAll('.nav-link');
+
+// Add a click event listener to each link
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+        // Remove "active" class from all links
+        navLinks.forEach(function(navLink) {
+            navLink.classList.remove('active');
+        });
+        // Add "active" class to the clicked link
+        this.classList.add('active');
+    });
+});
     </script>
     
 

@@ -44,3 +44,5 @@ tzdata
 uritemplate
 urllib3
 firebase-admin
+python-decouple
+whitenoise
