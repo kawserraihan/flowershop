@@ -28,6 +28,7 @@ class Inventory(models.Model):
     color = models.ForeignKey(color, on_delete=models.CASCADE)
     price = models.IntegerField()
     description = models.CharField(max_length=300)
+    image = models.CharField(max_length=300, blank = True, null = True)
 
     # Add a field to store Firestore document ID
     firestore_document_id = models.CharField(max_length=50, blank=True)

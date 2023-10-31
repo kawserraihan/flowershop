@@ -18,7 +18,11 @@ class ColorAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 class InventoryAdmin(admin.ModelAdmin):
-    list_display = ('name','type','color','price','description', 'firestore_document_id')
+    list_display = ('name','type','color','price','description', 'image', 'firestore_document_id')
+    search_fields = ('name',)
+
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ('name','contact','address')
     search_fields = ('name',)
 
 
@@ -26,3 +30,4 @@ class InventoryAdmin(admin.ModelAdmin):
 admin.site.register(type, TypeAdmin)
 admin.site.register(color, ColorAdmin)
 admin.site.register(Inventory,InventoryAdmin)
+admin.site.register(Customer, CustomerAdmin)

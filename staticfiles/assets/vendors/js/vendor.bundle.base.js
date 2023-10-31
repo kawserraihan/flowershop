@@ -29,30 +29,5 @@ this.negativeScrollAdjustment=this.isNegativeScroll?this.element.scrollWidth-thi
 this.event.unbindAll(),e(this.scrollbarX),e(this.scrollbarY),e(this.scrollbarXRail),e(this.scrollbarYRail),this.removePsClasses(),this.element=null,this.scrollbarX=null,this.scrollbarY=null,this.scrollbarXRail=null,this.scrollbarYRail=null,this.isAlive=!1)},H.prototype.removePsClasses=function(){this.element.className=this.element.className.split(" ").filter(function(a){return!a.match(/^ps([-_].+|)$/)}).join(" ")},H});
 
     // JavaScript to add the CSRF token and handle the click event
-    document.getElementById('addLink').addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default link behavior (navigating)
-      
-      // Get the CSRF token value
-      var csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-      // Create a form element
-      var form = document.createElement('form');
-      form.method = 'POST';
-
-      // Set the action URL
-      form.action = '{% url 'add_class' request.user.teacher.id %}';
-
-      // Create an input element for the CSRF token
-      var csrfInput = document.createElement('input');
-      csrfInput.type = 'hidden';
-      csrfInput.name = 'csrfmiddlewaretoken';
-      csrfInput.value = csrfToken;
-
-      // Append the CSRF token input to the form
-      form.appendChild(csrfInput);
-
-      // Append the form to the document and submit it
-      document.body.appendChild(form);
-      form.submit();
-  });
 

@@ -8,11 +8,12 @@ from django.http import JsonResponse
 def create_firestore_document(sender, instance, created, **kwargs):
     if created:
         data = {
-            "name": instance.name,
-            "type": instance.type.name,
-            "color": instance.color.name,
-            "price": instance.price,
-            "description": instance.description,
+            "flowerName": instance.name,
+            "flowerType": instance.type.name,
+            "flowerColor": instance.color.name,
+            "flowerPrice": instance.price,
+            "flowerDescription": instance.description,
+            "flowerImage": instance.image,
 
         }
 

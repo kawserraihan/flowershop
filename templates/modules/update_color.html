@@ -1,0 +1,16 @@
+{% extends 'base/index.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<div class="container">
+    <h2>Update Color</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-gradient-dark btn-fw">Update</button>
+    </form>
+</div>
+{% endblock %}

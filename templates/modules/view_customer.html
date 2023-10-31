@@ -15,34 +15,21 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Inventory Item Details</h4>
+                    <h4 class="card-title">Customer Details</h4>
                     <table class="table">
                         <tr>
                             <th>Name:</th>
-                            <td>{{ inventory_item.name }}</td>
+                            <td>{{ customer.name }}</td>
                         </tr>
                         <tr>
-                            <th>Type:</th>
-                            <td>{{ inventory_item.type }}</td>
+                            <th>Contact Number:</th>
+                            <td>{{ customer.contact }}</td>
                         </tr>
                         <tr>
-                            <th>Color:</th>
-                            <td>{{ inventory_item.color }}</td>
+                            <th>Address:</th>
+                            <td>{{ customer.address }}</td>
                         </tr>
-                        <tr>
-                            <th>Price:</th>
-                            <td>{{ inventory_item.price }}</td>
-                        </tr>
-                        <tr>
-                            <th>Description:</th>
-                            <td>{{ inventory_item.description }}</td>
-                        </tr>
-
-                        <tr>
-                            <th>Image:</th>
-                            <td>{{ inventory_item.image }}</td>
-                        </tr>
-
+                       
                     </table>
                 </div>
             </div>
